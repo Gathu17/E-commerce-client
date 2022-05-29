@@ -1,0 +1,66 @@
+.category{
+  position: relative;
+  align-items: center;
+};
+.button{
+  display:flex;
+  justify-content: center;
+  background-color: transparent !important;
+}
+.form-container{
+  width: 400px;
+  margin: auto;
+  opacity: 1 !important;
+  z-index: 1000;
+  font-weight: bolder;
+}
+.btn-slider{
+  text-decoration: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn-slider:hover{
+  color: red;
+}
+.page-title{
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px
+
+}
+.btn-news:hover{
+  background-color: rgba(255, 0, 0,1)
+}
+.product-image{
+  text-decoration: none;
+  color: black;
+}
+.cart-icon{
+  margin-right: 20px !important;
+  width: 60px !important;
+  height: 30px !important;
+}
+.grid-product{
+  margin-bottom: 20px !important;
+}
+.product-page{
+  overflow-y: scroll !important;
+}
+.register-container{
+  width: 100vw !important;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/1103511/pexels-photo-1103511.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&drp=2");
+  opacity: 0.6;
+  background-repeat: no-repeat;
+}
+.login-container{
+  width: 100vw !important;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=940&h=650&dpr=2");
+  opacity: 0.6;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
