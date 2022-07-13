@@ -18,7 +18,7 @@ const errorLink = onError(({graphQLErrors, networkError}) => {
       }
 })
 const httpLink = createHttpLink({ 
-    uri: 'http://localhost:5000'
+    uri: 'https://vast-atoll-78477.herokuapp.com/'
 })
 const authLink =  setContext((_,{headers}) =>{
   const token = localStorage.getItem('jwtToken')

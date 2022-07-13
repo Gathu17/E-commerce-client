@@ -53,6 +53,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "https://vast-atoll-78477.herokuapp.com/",
   "devDependencies": {
     "@types/styled-components": "^5.1.24"
   }
