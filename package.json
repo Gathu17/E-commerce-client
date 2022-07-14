@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.6.9",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -55,6 +54,7 @@
   },
   "proxy": "https://vast-atoll-78477.herokuapp.com/",
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
     "@types/styled-components": "^5.1.25"
   }
 }
