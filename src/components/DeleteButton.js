@@ -6,7 +6,7 @@ import {GET_CART} from '../util/graphql'
 function DeleteCart({productId,name,callback}){
     const[confirmOpen,setConfirmOpen] = useState(false)
     const mutation = name ? DELETE_PRODUCT : DELETE_CART;
-    const [deleteItem,{loading,data}] = useMutation(mutation,{
+    const [deleteItem,{data}] = useMutation(mutation,{
         update(cache){
           if(!name){
             callback()
