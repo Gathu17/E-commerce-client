@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {gql,useMutation} from '@apollo/client'
 import {incrementProduct} from '../redux/cartRedux'

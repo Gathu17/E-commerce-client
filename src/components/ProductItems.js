@@ -1,6 +1,5 @@
-import React, {useState,useEffect,useContext} from 'react';
-import styled from 'styled-components'
-import {Grid,Icon,Transition} from 'semantic-ui-react'
+import React, {useState,useEffect} from 'react';
+import {Transition} from 'semantic-ui-react'
 
 
 import ProductItem from './Product'

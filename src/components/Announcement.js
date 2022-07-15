@@ -11,7 +11,7 @@ transition: all 1s ease-out ;
 
 const Announcement = () => {
     const [changeAdvert,setChangeAdvert] = useState(false)
-    const container = document.getElementsByClassName('cont')
+    
 
     useEffect(() => {
        const interval = setInterval(() => {

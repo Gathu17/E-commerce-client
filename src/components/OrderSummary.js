@@ -37,6 +37,7 @@ const Summary = () => {
 
     const onToken = (token)=> {
         setStripeToken(token)
+        console.log(stripeToken)
     }
     console.log(KEY)
     return ( 

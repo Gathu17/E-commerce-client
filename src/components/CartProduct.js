@@ -5,7 +5,7 @@ import {FETCH_PRODUCT} from '../util/graphql'
 import DeleteButton from './DeleteButton'
 import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux'
-import {incrementProduct,decrementProduct} from '../redux/cartRedux'
+import {decrementProduct} from '../redux/cartRedux'
 import {useNavigate} from 'react-router'
 import {mobile} from '../util/responsive'
 
@@ -39,10 +39,7 @@ height: 20px;
 border-radius: 50%;
 background-color: ${(props)=> props.color}
 `
-const Hr = styled.hr`
-opacity: 0.5;
-height: 1px;
-`
+
 const PriceDetails = styled.div`
 font-size: 1.9em;
 font-weight: 200;
@@ -50,10 +47,10 @@ font-weight: 200;
 
 const Price = styled.div``
 let Prices;
-const CartProduct = ({product:{productId,quantity}}) => {
+const CartProduct = ({product:{productId}}) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const Total = useSelector(state => state.cart.total)
+    //const Total = useSelector(state => state.cart.total)
     const count = useSelector(state => state.cart.quantity)
    
     const {data} = useQuery(FETCH_PRODUCT,{
@@ -75,7 +72,7 @@ const CartProduct = ({product:{productId,quantity}}) => {
         }
     if(data) {
         console.log(data)
-        const {title,img ,size, price, color} = data.getProduct
+        const {title,img ,size, color} = data.getProduct
         
          
          console.log(Prices)

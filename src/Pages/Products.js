@@ -1,7 +1,7 @@
-import React, { useContext, useEffect,useState, useRef} from 'react';
-import { Grid,Transition } from 'semantic-ui-react';
+import React, { useState} from 'react';
+import { Grid } from 'semantic-ui-react';
 import {useQuery} from '@apollo/client';
-import {AuthContext} from '../util/auth'
+//import {AuthContext} from '../util/auth'
 import {FETCH_PRODUCTS} from '../util/graphql'
 import ProductItems from '../components/ProductItems'
 import styled from 'styled-components'
@@ -27,10 +27,10 @@ const Option = styled.option``
 
 
 function Products(){
-  const {user} = useContext(AuthContext);
+  
   const {loading,data} = useQuery(FETCH_PRODUCTS)
   const [filters, setFilters] = useState({})
-  const [filteredProducts, setFilteredProducts] = useState([])
+  
 
   
 
