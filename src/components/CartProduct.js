@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux'
 import {decrementProduct} from '../redux/cartRedux'
 import {useNavigate} from 'react-router'
 import {mobile} from '../util/responsive'
+import {TailSpin} from 'react-loader-spinner'
 
 const Product = styled.div`
 display: flex;
@@ -50,10 +51,9 @@ let Prices;
 const CartProduct = ({product:{productId}}) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    //const Total = useSelector(state => state.cart.total)
     const count = useSelector(state => state.cart.quantity)
    
-    const {data} = useQuery(FETCH_PRODUCT,{
+    const {data,loading} = useQuery(FETCH_PRODUCT,{
         variables: {productId}
     })
     let products;
@@ -71,15 +71,15 @@ const CartProduct = ({product:{productId}}) => {
           dispatch(decrementProduct({Prices}))
         }
     if(data) {
-        console.log(data)
+        
         const {title,img ,size, color} = data.getProduct
         
          
          console.log(Prices)
-        products = (
-            
+        products = 
+              
                    <Product>
-                   
+                    
                     <ProductDetails>
                         <Image src={img}/> 
                         <Details>
@@ -96,7 +96,7 @@ const CartProduct = ({product:{productId}}) => {
                     </PriceDetails>
                    </Product>
                  
-        )
+        
           
     } 
     

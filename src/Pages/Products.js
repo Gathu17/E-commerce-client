@@ -23,9 +23,10 @@ font-weight: 100;
 margin-right: 10px;
 `
 const Select =  styled.select``
-const Option = styled.option``
+const Option = styled.option`
 
-
+font-size: 20px
+`
 function Products(){
   
   const {loading,data} = useQuery(FETCH_PRODUCTS)
@@ -50,19 +51,21 @@ function Products(){
                      <Filter name='Gender'>
                          <FilterText>Filters:</FilterText>
                          <Select name='Genders' onChange={handleFilters}>
-                             <Option disabled>Gender</Option>
+                         <optgroup label="Genders" style={{fontWeight:"bold"}}>
                              <Option>Men</Option>
                              <Option>Women</Option>
                              <Option>Unisex</Option>
+                        </optgroup>
                          </Select>
                      </Filter>
                      <Filter >
                          
                          <Select name='Type' onChange={handleFilters}>
-                             <Option disabled>Type</Option>
-                             <Option>Jacket</Option>
+                         <optgroup label="Type" style={{fontWeight:"bold"}}>
+                                <Option>Jacket</Option>
                              <Option>T-shirt</Option>
                              <Option>Official</Option>
+                             </optgroup>
                          </Select>
                      </Filter>
                 </FilterContainer>

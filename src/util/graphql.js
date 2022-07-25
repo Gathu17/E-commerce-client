@@ -35,3 +35,13 @@ query GetCart{
    }
 }
 `
+export const CREATE_CART = gql`
+  mutation createCart($productId:ID!, $quantity: Int) {
+    createCart(productId: $productId, quantity: $quantity){
+        id 
+            products{
+                id ,productId ,quantity
+            }
+    }
+  }
+`

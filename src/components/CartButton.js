@@ -23,7 +23,7 @@ const CartButton = ({id,count,price}) => {
     const Prices = price * count
     const [incProduct,] = useMutation(ADD_TO_CART,{
         update(_,{data}){
-            console.log(data)
+            
             dispatch(incrementProduct({Prices}))
         },
         variables: {productId: id,quantity:count}

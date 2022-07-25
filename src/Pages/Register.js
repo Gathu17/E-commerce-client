@@ -17,7 +17,7 @@ function Register (){
 
   const [addUser,{loading}] = useMutation(REGISTER_USER,{
    update(_,{data:{register:userData}}){
-     console.log(userData);
+    
      context.login(userData);
      Navigate('/Products')
    },
@@ -36,7 +36,7 @@ function Register (){
   <div className='form-container'>
         <Form onSubmit={onSubmit} className={loading?'loading':''}>
     <Form.Field>
-      <label>Username</label>
+      <label style={{fontSize:'16px'}}>Username</label>
       <input 
       placeholder='Username'
       name='username'
@@ -46,7 +46,7 @@ function Register (){
       
     </Form.Field>
     <Form.Field>
-      <label>Email</label>
+      <label style={{fontSize:'16px'}}>Email</label>
       <input
        placeholder='Email'
       name='email'
@@ -55,7 +55,7 @@ function Register (){
       onChange={onChange}/>
     </Form.Field>
     <Form.Field>
-      <label>Password</label>
+      <label style={{fontSize:'16px'}}>Password</label>
       <input 
       placeholder='Password'
       name='password'
@@ -64,7 +64,7 @@ function Register (){
       onChange={onChange}/>
     </Form.Field>
     <Form.Field>
-      <label>Confirm Password</label>
+      <label style={{fontSize:'16px'}}>Confirm Password</label>
       <input 
       placeholder='Confirm Password' 
       name='confirmPassword'

@@ -35,7 +35,7 @@ function Login() {
         <div className="form-container">
            <Form onSubmit={onSubmit} className={loading?'loading':''}>
              <Form.Field>
-      <label>Username</label>
+      <label style={{fontSize:'16px'}}>Username</label>
       <input 
       placeholder='Username'
       name='username'
@@ -45,7 +45,7 @@ function Login() {
       
             </Form.Field>
             <Form.Field>
-      <label>Password</label>
+      <label style={{fontSize:'16px'}}>Password</label>
       <input
        placeholder='Password'
       name='password'

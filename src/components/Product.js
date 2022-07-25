@@ -12,8 +12,10 @@ const Info = styled.div`
 position: absolute;
 z-index: 3;
 background-color: rgba(250,250,250,0.5);
-width:200px;
-height: 200px;
+width:80%;
+height: 60%;
+border: none;
+border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -30,10 +32,11 @@ justify-content:center;
 flex:1;
 background-color:rgb(255, 0, 0,0.2);
 position: relative;
-height: 100%;
+height: 80%;
 width: 80%;
 margin:auto;
 
+box-shadow: 5px 5px 10px 2px #808080;
 &:hover ${Info}{
   opacity: 1;
 }
@@ -42,9 +45,10 @@ margin:auto;
 const Circle = styled.div`
 position: absolute;
 border-radius: 50%;
-width: 250px;
-height: 250px;
+width: 100%;
+height: 100%;
 background-color: white;
+box-shadow: 5px 5px 20px 10px #808080 inset;
 `
 const Desc = styled.p`
 margin: 5px;
@@ -83,17 +87,39 @@ z-index: 1;
 `
 const Image = styled.img`
 
-width: 200px;
-height: 200px;
+width: 90%;
+height: 80%;
+border-radius: 10px;
 object-fit: cover;
 
 `
 const Delete = styled.div`
-padding: 5;
-top: 5 !important;
-border-radius: 50%;
+top: 5;
 background-color: #b4b4b4;
 `
+const loadAnim = keyframes`
+0%{
+    transform: rotate(0);
+    transform-origin: 50% 50%;
+}
+100%{
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+}
+`
+const TailSpin = styled.span`
+width: 20%;
+height: 20%;
+position: relative;
+margin: 0 auto;
+border-radius: 50%;
+border: 1px solid black;
+animation-name: ${loadAnim};
+animation-duration: 2s;
+animation-iteration-count: infinite;
+`
+
+
 const ProductItem = ({product}) => {
     const {user} = useContext(AuthContext)
     const dispatch = useDispatch()
@@ -107,7 +133,7 @@ const ProductItem = ({product}) => {
             <Container >
               <Circle/>
                <ImgContainer  >
-                  <Image src={product.img} />
+                  <Image src={product ? product.img : <TailSpin  /> }/>
                </ImgContainer>
         <Info  as={Link} to={`/SingleProduct/${product.id}`}>
             <IconField>
