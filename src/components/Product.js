@@ -6,7 +6,7 @@ import {Grid,Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import {incrementProduct} from '../redux/cartRedux'
 import {useDispatch} from 'react-redux'
-
+import {keyframes} from 'styled-components'
 
 const Info = styled.div`
 position: absolute;
