@@ -44,7 +44,7 @@
   height: 30px !important;
 }
 .grid-product{
-  margin-bottom: 20px !important;
+  /*margin-bottom: 20px !important;*/
 }
 .product-page{
   overflow-y: scroll !important;
@@ -52,7 +52,7 @@
 .register-container{
   width: 100vw !important;
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/1103511/pexels-photo-1103511.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&drp=2");
+  background-image: url("https://images.pexels.com/photos/1144834/pexels-photo-1144834.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   opacity: 0.6;
   background-repeat: no-repeat;
 }
