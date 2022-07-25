@@ -127,7 +127,7 @@ const SingleProduct = () => {
   
   let productData;
   if(!data){
-    productData= <h1>Loading Product...</h1>
+    productData= <h1  style={{textAlign:"center"}}>Loading Product...</h1>
     
   }else{
     const {id,title,desc,img,color,price} = data.getProduct

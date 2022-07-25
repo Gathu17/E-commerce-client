@@ -74,7 +74,7 @@ function Products(){
                  Trending Now
             </Grid.Row>
             <Grid.Row>
-                 {loading?(<h1>Loading Products...</h1>):(<ProductItems  products={data.getProducts} filters={filters}/>)}
+                 {loading?(<h1  style={{textAlign:"center"}}>Loading Products...</h1>):(<ProductItems  products={data.getProducts} filters={filters}/>)}
             </Grid.Row>
         </Grid>
     </div>
