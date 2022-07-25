@@ -7,8 +7,7 @@ import {useDispatch} from 'react-redux'
 import {useSelector} from 'react-redux'
 import {decrementProduct} from '../redux/cartRedux'
 import {useNavigate} from 'react-router'
-import {mobile} from '../util/responsive'
-import {TailSpin} from 'react-loader-spinner'
+import {mobile} from '../util/responsive';
 
 const Product = styled.div`
 display: flex;
@@ -53,7 +52,7 @@ const CartProduct = ({product:{productId}}) => {
     const navigate = useNavigate()
     const count = useSelector(state => state.cart.quantity)
    
-    const {data,loading} = useQuery(FETCH_PRODUCT,{
+    const {data} = useQuery(FETCH_PRODUCT,{
         variables: {productId}
     })
     let products;
