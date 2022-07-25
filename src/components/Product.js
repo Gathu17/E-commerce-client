@@ -94,8 +94,9 @@ object-fit: cover;
 
 `
 const Delete = styled.div`
-top: 5;
-background-color: #b4b4b4;
+position: absolute;
+bottom:5%;
+margin: auto;
 `
 const loadAnim = keyframes`
 0%{

@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom'
   
    const menubar = user ? (
     <div>
-    <Menu pointing secondary size="massive" color="#ff1e60">
+    <Menu pointing secondary size="massive" color="red">
       <Menu.Item
         name='home'
         active={activeItem === 'home'}
@@ -37,7 +37,8 @@ import {Link} from 'react-router-dom'
         name='logout'
         active={activeItem === 'logout'}
         onClick={logout}
-        
+        as='a'
+        href='/'
         
       />
       </Menu.Menu>
