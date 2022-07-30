@@ -1,6 +1,7 @@
 .category{
   position: relative;
   align-items: center;
+  
 };
 .button{
   display:flex;

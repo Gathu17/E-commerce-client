@@ -8,6 +8,7 @@ position: relative;
 display: flex;
 background-image: ${(props)=> props.backgroundColor};
 margin-bottom: 20px;
+${mobile({height: "60vh"})}
 `;
 
 
@@ -49,6 +50,7 @@ height: 100vh;
 display: flex;
 align-items:center;
 justify-content:center;
+${mobile({height: "50vh"})}
 `
 const Desc = styled.p`
 margin: 20px 20px;
@@ -87,7 +89,7 @@ z-index:2;
     opacity:1;
     transform: scale(1.2,1.2);
 }
-${mobile({marginTop:'20px',marginLeft:'20px'})}
+${mobile({marginTop:'20px',marginLeft:'20px',padding: "10px"})}
 `
 
 const Slider = ({config}) => {

@@ -12,7 +12,8 @@ object-fit: cover;
 
 `
 const Container = styled.div`
-${mobile({paddig:"0px", flexDirecton: "column "})}
+
+${mobile({marginLeft:"5%", flexDirecton: "column ",width:"100%",justifyContent: "space-between",})}
 `
 
 const Title = styled.h1`
@@ -42,9 +43,9 @@ opacity:0;
 function Category(){
  return(
    <Container>
-    <Grid columns={window.innerWidth < 600 ? (1) : (3)} className='category-cont' divided>
+    <Grid columns={window.innerWidth < 600 ? (1) : (3)} className='category-cont' divided padded>
     <Grid.Row>
-      <Grid.Column className="category">
+      <Grid.Column className="category" height={window.innerWidth < 600 ? (2):''}>
          <Image src='https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
          <Title>OFFICIAL WEAR
              <Button as={Link} to={'/Products/Official'} className="button">SHOP NOW</Button>
