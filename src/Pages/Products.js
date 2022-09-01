@@ -5,13 +5,15 @@ import {useQuery} from '@apollo/client';
 import {FETCH_PRODUCTS} from '../util/graphql'
 import ProductItems from '../components/ProductItems'
 import styled from 'styled-components'
+import {mobile} from '../util/responsive'
+
 
 const FilterContainer = styled.div`
 display: flex;
 justify-content: space-between;
 margin: 20px;
 width: 50%;
-
+${mobile({width: '30%'})}
 `
 const Filter = styled.div`
 padding: 5px;
@@ -21,6 +23,7 @@ const FilterText = styled.h3`
 font-size: 30px;
 font-weight: 100;
 margin-right: 10px;
+${mobile({fontSize:'16px'})}
 `
 const Select =  styled.select``
 const Option = styled.option`

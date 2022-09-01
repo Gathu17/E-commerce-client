@@ -49,6 +49,8 @@ width: 100%;
 height: 100%;
 background-color: white;
 box-shadow: 5px 5px 20px 10px #808080 inset;
+background-image: url(${(props)=> props.bgImg});
+background-size: cover;
 `
 const Desc = styled.p`
 margin: 5px;
@@ -89,9 +91,9 @@ const Image = styled.img`
 
 width: 90%;
 height: 80%;
-border-radius: 10px;
+border-radius: 50%;
 object-fit: cover;
-
+opacity:0;
 `
 const Delete = styled.div`
 position: absolute;
@@ -132,7 +134,7 @@ const ProductItem = ({product}) => {
         <>
         <Grid.Column className='grid-product'>
             <Container >
-              <Circle/>
+              <Circle bgImg={product ? product.img : <TailSpin  />}/>
                <ImgContainer  >
                   <Image src={product ? product.img : <TailSpin  /> }/>
                </ImgContainer>
