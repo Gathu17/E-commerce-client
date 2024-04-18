@@ -5,7 +5,6 @@ import {FETCH_PRODUCT} from '../util/graphql'
 import DeleteButton from './DeleteButton'
 import {useDispatch} from 'react-redux'
 import {decrementProduct} from '../redux/cartRedux'
-import {useNavigate} from 'react-router'
 import {mobile} from '../util/responsive';
 
 const Product = styled.div`

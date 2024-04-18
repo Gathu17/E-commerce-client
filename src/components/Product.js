@@ -1,10 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components'
-import {AuthContext} from '../util/auth'
 import {Grid,Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
-import {incrementProduct} from '../redux/cartRedux'
-import {useDispatch} from 'react-redux'
 import {keyframes} from 'styled-components'
 
 const Info = styled.div`
@@ -120,11 +117,6 @@ animation-iteration-count: infinite;
 
 
 const ProductItem = ({product}) => {
-    const dispatch = useDispatch()
-    const Prices = product.price
-    // function addProduct(){
-    //    dispatch(incrementProduct({Prices}))
-    // }
     return ( 
         <>
         <Grid.Column className='grid-product'>
