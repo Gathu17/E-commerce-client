@@ -34,7 +34,7 @@ const Summary = () => {
     const Total = Price + 20
     const KEY = 'pk_test_51KYK0iHhJUYoUkw2Uh0JmIzMbbM36Ombp49F4vyMwQz0PaXqxsvclAwm9GznR0HOMpxzVmx6IBVhGFPsZ5wzlax3002qx0ISJL'
 
-    const [stripeToken, setStripeToken] = useState(null)
+    const [_, setStripeToken] = useState(null)
 
     const onToken = (token)=> {
         setStripeToken(token)
