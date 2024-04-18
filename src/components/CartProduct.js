@@ -57,11 +57,11 @@ const CartProduct = ({product:{productId}}) => {
     })
     let products;
    useEffect(() => {
-     if(count === 0){
-      navigate('/Products')
-     }else{
+      if(count === 0){
+        navigate('/Products')
+      }else{
 
-     }
+      } 
    })
   
    
@@ -72,9 +72,6 @@ const CartProduct = ({product:{productId}}) => {
     if(data) {
         
         const {title,img ,size, color} = data.getProduct
-        
-         
-         console.log(Prices)
         products = 
               
                    <Product>

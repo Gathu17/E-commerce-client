@@ -9,7 +9,7 @@ import {mobile} from '../util/responsive'
 
 const Wrapper = styled.div`
 width: 80vw;
-height:40vw;
+height:90vh;
 margin:auto;
 position: relative;
 display: flex;
@@ -119,7 +119,6 @@ const SingleProduct = () => {
 
   const [count,setCount] = useState(1);
  
-  console.log(productId)
   const {data} =  useQuery(FETCH_PRODUCT,{
       variables: {productId}
   })
