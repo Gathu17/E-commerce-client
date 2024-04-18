@@ -64,7 +64,7 @@ const Summary = styled.div`
 flex: 1;
 justify-content: center;
 padding: 20px;
-height: 50vh;
+height: 60vh;
 border-radius: 10px;
 border: 0.5px solid black;
 position:sticky;
