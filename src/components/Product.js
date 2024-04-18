@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components'
-import DeleteButton from './DeleteButton'
 import {AuthContext} from '../util/auth'
 import {Grid,Icon} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
@@ -97,11 +96,6 @@ border-radius: 50%;
 object-fit: cover;
 opacity:0;
 `
-const Delete = styled.div`
-position: absolute;
-bottom:5%;
-margin: auto;
-`
 const loadAnim = keyframes`
 0%{
     transform: rotate(0);
@@ -126,12 +120,11 @@ animation-iteration-count: infinite;
 
 
 const ProductItem = ({product}) => {
-    const {user} = useContext(AuthContext)
     const dispatch = useDispatch()
     const Prices = product.price
-    function addProduct(){
-       dispatch(incrementProduct({Prices}))
-    }
+    // function addProduct(){
+    //    dispatch(incrementProduct({Prices}))
+    // }
     return ( 
         <>
         <Grid.Column className='grid-product'>

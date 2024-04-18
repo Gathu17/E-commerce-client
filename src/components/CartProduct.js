@@ -4,7 +4,6 @@ import {useQuery} from '@apollo/client'
 import {FETCH_PRODUCT} from '../util/graphql'
 import DeleteButton from './DeleteButton'
 import {useDispatch} from 'react-redux'
-import {useSelector} from 'react-redux'
 import {decrementProduct} from '../redux/cartRedux'
 import {useNavigate} from 'react-router'
 import {mobile} from '../util/responsive';
@@ -49,8 +48,6 @@ const Price = styled.div``
 let Prices;
 const CartProduct = ({product:{productId}}) => {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const count = useSelector(state => state.cart.quantity)
    
     const {data} = useQuery(FETCH_PRODUCT,{
         variables: {productId}
