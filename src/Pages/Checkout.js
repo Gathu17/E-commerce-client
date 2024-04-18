@@ -7,6 +7,7 @@ import SummaryProduct from '../components/OrderSummary'
 import {GET_CART} from '../util/graphql'
 import {useNavigate} from 'react-router'
 import {mobile} from '../util/responsive'
+import { Link } from 'react-router-dom'; 
 
 
 const Container = styled.div`
@@ -35,6 +36,7 @@ color: ${(props)=> props.type==='filled'?'white': 'black'}
 &:hover{
     background-color: ${(props)=> props.type==='filled' ? 'transparent':'black'}
 }
+text-decoration : none;
 `
 const TopText = styled.p`
    font-size: 12px;
@@ -49,6 +51,12 @@ margin-top: 10px;
 ${mobile({flexDirection: 'column'})}
 
 `
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`
+
 const Info = styled.div`
 flex: 3;
 `
@@ -109,7 +117,7 @@ const Cart = () => {
     let usercart;
    if(data){
       if(!user){
-          return navigate('/')
+          navigate('/')
       }
 usercart = (
             
@@ -118,7 +126,9 @@ usercart = (
             <Container>
             <Title>YOUR BAG</Title>
             <Top>
-                <TopButton>CONTINUE SHOPPING</TopButton>
+            <StyledLink to={'/products'}>
+                <TopButton >CONTINUE SHOPPING</TopButton>
+            </StyledLink>
                 <TopText>
                     Shopping Bag(0)
                 </TopText>

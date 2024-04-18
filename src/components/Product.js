@@ -22,21 +22,21 @@ justify-content: center;
 flex-wrap: wrap;
 opacity:0;
 color: black !important;
+padding: 5%;
 text-decoration: none !important;
-
 `
 const Container = styled.div`
 display:flex;
 align-items:center;
 justify-content:center;
 flex:1;
-background-color:rgb(255, 0, 0,0.2);
+// background-color:rgb(255, 0, 0,0.2);
 position: relative;
 height: 80%;
 width: 80%;
 margin:auto;
 
-box-shadow: 5px 5px 10px 2px #808080;
+// box-shadow: 5px 5px 10px 2px #808080;
 &:hover ${Info}{
   opacity: 1;
 }
@@ -59,6 +59,11 @@ font-weight: bolder;
 font-size: 20px;
 text-decoration: none;
 `
+const Title =  styled.h2`
+text-align : center;
+font-size: 1.2rem;
+margin-top: 2%;
+`
 const IconField = styled.div`
 width: 30px;
 height: 30px;
@@ -78,17 +83,14 @@ color: inherit;
 }
 `
 const ImgContainer = styled.div`
-
 height: 75%;
 display: flex;
 align-items: center;
 justify-content: center;
 object-fit:cover;
 z-index: 1;
-
 `
 const Image = styled.img`
-
 width: 90%;
 height: 80%;
 border-radius: 50%;
@@ -143,10 +145,10 @@ const ProductItem = ({product}) => {
                <Icon onClick={addProduct} name='add to cart'/>
             </IconField>
             <Desc>Price {product.price}$</Desc>
-            {user && user.isAdmin && <Delete><DeleteButton productId={product.id} name={product.title}/></Delete>}
+            {/* {user && user.isAdmin && <Delete><DeleteButton productId={product.id} name={product.title}/></Delete>} */}
         </Info>
             </Container>
-        
+        <Title>{product.title}</Title>
     </Grid.Column>
         </>
      );

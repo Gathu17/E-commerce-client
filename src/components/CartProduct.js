@@ -57,11 +57,7 @@ const CartProduct = ({product:{productId}}) => {
     })
     let products;
    useEffect(() => {
-      if(count === 0){
-        navigate('/Products')
-      }else{
-
-      } 
+      
    })
   
    
@@ -94,7 +90,12 @@ const CartProduct = ({product:{productId}}) => {
                  
         
           
-    } 
+    } else{
+      products = 
+      <Product>
+          <h1>EMPTY</h1>
+      </Product>
+    }
     
     
   

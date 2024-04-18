@@ -9,7 +9,6 @@ import ProductItem from './Product'
 const ProductItems = ({products,filters}) => {
    
    const [filteredProducts,setFilteredProducts] = useState()
-    console.log(products)
      useEffect(() =>{
          if(filters){
              setFilteredProducts( products.filter( (product)=> Object.values(filters).every((value) => 
@@ -18,7 +17,6 @@ const ProductItems = ({products,filters}) => {
          }
          
      },[filters,products])
-    console.log(filteredProducts)
     const items = filteredProducts ? filteredProducts : products
     return (
         <>

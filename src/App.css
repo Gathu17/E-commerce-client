@@ -48,7 +48,7 @@
   /*margin-bottom: 20px !important;*/
 }
 .product-page{
-  overflow-y: scroll !important;
+  /* overflow-y: scroll; */
 }
 .register-container{
   width: 100vw !important;
