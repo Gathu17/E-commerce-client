@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import StripeCheckout from 'react-stripe-checkout'
 import {mobile} from '../util/responsive'
 
+
 const SummaryTitle  = styled.h1`
 font-size: 30px;
 font-weight: 600;
@@ -37,34 +38,32 @@ const Summary = () => {
 
     const onToken = (token)=> {
         setStripeToken(token)
-        console.log(stripeToken)
     }
-    console.log(KEY)
     return ( 
         <>
            
-                   <SummaryTitle>ORDER SUMMARY</SummaryTitle>
-                   <SummaryItem>
-                       <SummaryName>Subtotal</SummaryName>
-                       <SummaryText>$ {Price}</SummaryText>
-                   </SummaryItem>
-                   <SummaryItem>
-                       <SummaryName>Shipping Cost</SummaryName>
-                       <SummaryText>$ 20</SummaryText>
-                   </SummaryItem>
-                   <SummaryItem type='total'>
-                       <SummaryName>Total</SummaryName>
-                       <SummaryText>$ {Total}</SummaryText>
-                   </SummaryItem>
-                   <StripeCheckout
-                   name='E-shop'
-                   image='../../images/man-156584.svg'
-                   amount={Total*100}
-                   token={onToken}
-                   stripeKey={KEY}
-                   >
-                       <Button>CHECKOUT</Button>
-                   </StripeCheckout>
+            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryItem>
+                <SummaryName>Subtotal</SummaryName>
+                <SummaryText>$ {Price}</SummaryText>
+            </SummaryItem>
+            <SummaryItem>
+                <SummaryName>Shipping Cost</SummaryName>
+                <SummaryText>$ 20</SummaryText>
+            </SummaryItem>
+            <SummaryItem type='total'>
+                <SummaryName>Total</SummaryName>
+                <SummaryText>$ {Total}</SummaryText>
+            </SummaryItem>
+            <StripeCheckout
+            name='E-shop'
+            image='../../images/man-156584.svg'
+            amount={Total*100}
+            token={onToken}
+            stripeKey={KEY}
+            >
+                <Button>CHECKOUT</Button>
+            </StripeCheckout>
                    
                 
         </>

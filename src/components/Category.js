@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Grid,Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom'
-import {mobile} from '../util/responsive'
+import {mobile,medium} from '../util/responsive'
 
 
 const Image = styled.img`
@@ -13,7 +13,7 @@ object-fit: cover;
 `
 const Container = styled.div`
 
-${mobile({marginLeft:"5%", flexDirecton: "column ",width:"100%",justifyContent: "space-between",})}
+${mobile({marginLeft:"5%", flexDirecton: "column ",width:"100%",justifyContent: "space-between"})}
 `
 
 const Title = styled.h1`
@@ -37,6 +37,9 @@ opacity:0;
 &:hover{
     opacity: 0.7;
 }
+${medium({fontSize: "2rem"})}
+${mobile({fontSize: "1.5rem"})}
+
 `
 
 

@@ -142,7 +142,7 @@ const ProductItem = ({product}) => {
                </ImgContainer>
         <Info  as={Link} to={`/SingleProduct/${product.id}`}>
             <IconField>
-               <Icon onClick={addProduct} name='add to cart'/>
+               <Icon name='add to cart'/>
             </IconField>
             <Desc>Price {product.price}$</Desc>
             {/* {user && user.isAdmin && <Delete><DeleteButton productId={product.id} name={product.title}/></Delete>} */}

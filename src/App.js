@@ -17,6 +17,7 @@ import store from './redux/store'
 
 function App() {
   return (
+    // TODO: Implement react persisted state
     <Provider store={store}>
        <AuthProvider>
     
